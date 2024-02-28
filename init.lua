@@ -1,0 +1,2 @@
+require('sweintritt')
+print('hello')
