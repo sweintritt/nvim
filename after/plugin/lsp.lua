@@ -32,7 +32,7 @@ require('mason-lspconfig').setup({
 	  'java_language_server',
 	  'texlab',
 	  'markdown_oxide',
-	  'pylyzer',
+	  'pylsp',
 	  'rust_analyzer',
 	  'sqls',
 	  'tsserver',
