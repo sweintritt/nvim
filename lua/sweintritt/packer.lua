@@ -21,6 +21,22 @@ return require('packer').startup(function(use)
         end
     })
 
+    -- My vim plugins
+-- Plugin 'ctrlpvim/ctrlp.vim'
+-- Plugin 'fatih/vim-go'
+-- Plugin 'joshdick/onedark.vim'
+-- Plugin 'preservim/nerdcommenter'
+-- Plugin 'preservim/nerdtree'
+-- Plugin 'puremourning/vimspector'
+-- Plugin 'ryanoasis/vim-devicons'
+-- Plugin 'tpope/vim-commentary'
+-- Plugin 'tpope/vim-fugitive'
+-- Plugin 'tpope/vim-surround'
+-- Plugin 'ycm-core/YouCompleteMe'
+-- Plugin 'vim-airline/vim-airline'
+-- Plugin 'vim-airline/vim-airline-themes'
+-- Plugin 'vim-syntastic/syntastic'
+
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
     use('nvim-treesitter/playground')
     use('theprimeagen/harpoon')
@@ -51,5 +67,10 @@ return require('packer').startup(function(use)
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
+    use {
+        'akinsho/bufferline.nvim',
+        tag = "*",
+        requires = 'nvim-tree/nvim-web-devicons'
     }
 end)
