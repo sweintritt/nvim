@@ -1,4 +1,6 @@
 ToDo
 =====
 
-* packer is currently not maintained
+* Disable unused plugins
+* Configure remaps
+* Add my settings
