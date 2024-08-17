@@ -31,3 +31,4 @@ vim.opt.smartcase = true -- ... but not when search pattern contains upper case 
 vim.opt.incsearch = true -- jump to search results on search
 vim.opt.hlsearch = true -- highlight found results
 vim.opt.showmode = false -- We show the mode with airline or lightline
+vim.opt.spelllang = { "de", "en" }
