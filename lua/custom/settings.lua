@@ -9,5 +9,3 @@ vim.opt.colorcolumn = "85"
 vim.opt.textwidth = 85
 
 vim.opt.formatoptions = "qrn1"
-
-vim.cmd.colorscheme("catppuccin-macchhiato")
