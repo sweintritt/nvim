@@ -157,10 +157,10 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
+require("custom.functions")
 require("custom.settings")
-require("custom.settings")
-require("custom.settings")
-require("custom.settings")
+require("custom.mappings")
+require("custom.commands")
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`

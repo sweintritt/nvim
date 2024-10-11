@@ -20,3 +20,32 @@ vim.keymap.set("i", "<C-v>", '<ESC>"+pa', { desc = "Pase from xterm clipboard" }
 vim.keymap.set("n", "<C-d>", "dd", { desc = "Delete the current line" })
 vim.keymap.set("n", "<A-k>", ":m .-2<CR>", { desc = "Move the current line up" })
 vim.keymap.set("n", "<A-j>", ":m .+1<CR>", { desc = "Move the current line down" })
+
+vim.keymap.set("n", "<C-x>", ":bn<CR>", { desc = "Switch to next buffer" })
+vim.keymap.set("n", "<C-y>", ":bp<CR>", { desc = "Switch to previous buffer" })
+
+vim.keymap.set("n", "<C-r>", "<ESC>:nohlsearch<CR>", { desc = "reset search highlighting" })
+
+-- Easy movement in insert mode
+vim.keymap.set("i", "<C-k>", "<C-o>k")
+vim.keymap.set("i", "<C-j>", "<C-o>j")
+vim.keymap.set("i", "<C-h>", "<C-o>h")
+vim.keymap.set("i", "<C-l>", "<C-o>l")
+
+-- Disable arrow keys
+vim.keymap.set("n", "<Up>", "<Nop>")
+vim.keymap.set("n", "<Down>", "<Nop>")
+vim.keymap.set("n", "<Left>", "<Nop>")
+vim.keymap.set("n", "<Right>", "<Nop>")
+
+vim.keymap.set("n", "<CR>", "<C-]>") -- Follow links
+vim.keymap.set("n", "<BS>", "<C-T>") -- Go back
+
+--" delete current line
+vim.keymap.set("n", "<C-d>", "dd")
+
+--" don't jump over split lines
+vim.keymap.set("n", "j", "gj")
+vim.keymap.set("n", "k", "gk")
+
+--inoremap <Tab> <C-R>=SuperCleverTab()<CR>
