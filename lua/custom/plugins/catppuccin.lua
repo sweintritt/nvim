@@ -2,6 +2,8 @@
 -- between low and high contrast themes. It consists of 4 soothing warm flavors with
 -- 26 eye-candy colors each, perfect for coding, designing, and much more!
 --  https://github.com/catppuccin/nvim
+return {}
+--[[
 return {
 	"catppuccin/nvim",
 	name = "catppuccin",
@@ -11,3 +13,4 @@ return {
 		vim.cmd.colorscheme("catppuccin-macchiato")
 	end,
 }
+]]--
