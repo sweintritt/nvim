@@ -43,15 +43,16 @@ endfunction
 
 function AddLogEntry()
 	-- Insert the formatted date
-	vim.api.nvim_put({ os.date("# %A %d.%m.%Y\n\n\n") }, "l", true, true)
+	local date = os.date("# %A %d.%m.%Y\n\n\n")
+	--vim.api.nvim_put( os.date("# %A %d.%m.%Y\n\n\n"), "l", true, true)
 	-- Save the current cursor position
-	local position = vim.api.nvim_win_get_cursor(0)
+	--local position = vim.api.nvim_win_get_cursor(0)
 	-- Insert an empty line after the date
-	vim.api.nvim_put({ "_" }, "l", true, true)
+	-- vim.api.nvim_put({ "_" }, "l", true, true)
 	-- Restore the cursor position
-	vim.api.nvim_win_set_cursor(0, position)
+	--vim.api.nvim_win_set_cursor(0, position)
 	-- Enter insert mode
-	vim.cmd("startinsert!")
+	--vim.cmd("startinsert!")
 end
 
 --[[
