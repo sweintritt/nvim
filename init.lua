@@ -158,7 +158,9 @@ vim.opt.cursorline = true
 vim.opt.scrolloff = 10
 
 require("custom.functions")
+-- TODO Move all settings from here to settings.lua
 require("custom.settings")
+-- TODO Move all mappings from here to mappings.lua
 require("custom.mappings")
 require("custom.commands")
 

@@ -1,10 +1,10 @@
 -- My custom NeoVim mappings additional to kickstart
 
 -- Disable arrow keys in normal mode
-vim.keymap.set("n", "<left>", '<cmd>echo "Use h to move!!"<CR>')
+vim.keymap.set("n", "<left>",  '<cmd>echo "Use h to move!!"<CR>')
 vim.keymap.set("n", "<right>", '<cmd>echo "Use l to move!!"<CR>')
-vim.keymap.set("n", "<up>", '<cmd>echo "Use k to move!!"<CR>')
-vim.keymap.set("n", "<down>", '<cmd>echo "Use j to move!!"<CR>')
+vim.keymap.set("n", "<up>",    '<cmd>echo "Use k to move!!"<CR>')
+vim.keymap.set("n", "<down>",  '<cmd>echo "Use j to move!!"<CR>')
 
 -- Keybinds to make split navigation easier.
 vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
@@ -18,8 +18,8 @@ vim.keymap.set("v", "<C-v>", '<ESC>"+p', { desc = "Paste from xterm clipboard" }
 vim.keymap.set("i", "<C-v>", '<ESC>"+pa', { desc = "Pase from xterm clipboard" })
 
 vim.keymap.set("n", "<C-d>", "dd", { desc = "Delete the current line" })
-vim.keymap.set("n", "<A-k>", ":m .-2<CR>", { desc = "Move the current line up" })
-vim.keymap.set("n", "<A-j>", ":m .+1<CR>", { desc = "Move the current line down" })
+vim.keymap.set("n", "<C-S-k>", ":m .-2<CR>", { desc = "Move the current line up" })
+vim.keymap.set("n", "<C-S-j>", ":m .+1<CR>", { desc = "Move the current line down" })
 
 vim.keymap.set("n", "<C-x>", ":bn<CR>", { desc = "Switch to next buffer" })
 vim.keymap.set("n", "<C-y>", ":bp<CR>", { desc = "Switch to previous buffer" })
@@ -37,15 +37,17 @@ vim.keymap.set("n", "<Up>", "<Nop>")
 vim.keymap.set("n", "<Down>", "<Nop>")
 vim.keymap.set("n", "<Left>", "<Nop>")
 vim.keymap.set("n", "<Right>", "<Nop>")
+vim.keymap.set("i", "<Up>", "<Nop>")
+vim.keymap.set("i", "<Down>", "<Nop>")
+vim.keymap.set("i", "<Left>", "<Nop>")
+vim.keymap.set("i", "<Right>", "<Nop>")
 
 vim.keymap.set("n", "<CR>", "<C-]>") -- Follow links
 vim.keymap.set("n", "<BS>", "<C-T>") -- Go back
 
---" delete current line
+-- delete current line
 vim.keymap.set("n", "<C-d>", "dd")
 
---" don't jump over split lines
+-- don't jump over split lines
 vim.keymap.set("n", "j", "gj")
 vim.keymap.set("n", "k", "gk")
-
---inoremap <Tab> <C-R>=SuperCleverTab()<CR>

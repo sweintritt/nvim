@@ -3,6 +3,7 @@ ToDo
 
 * Migrate all settings (if required) from my vim configuration to here
 * Plugins to try
+  * https://github.com/EL-MASTOR/bufferlist.nvim
   * https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-completion.md
     * mini.nvim is already included in kickstart
 * Move from Kickstart to a self made setup
