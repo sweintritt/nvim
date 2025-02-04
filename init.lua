@@ -1,7 +1,7 @@
-require("custom.functions")
-require("custom.settings")
-require("custom.mappings")
-require("custom.commands")
+require("functions")
+require("settings")
+require("mappings")
+require("commands")
 
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
@@ -25,7 +25,7 @@ vim.opt.rtp:prepend(lazypath)
 --  To update plugins you can run
 --    :Lazy update
 --
-require("lazy").setup({ { import = "custom.plugins" } })
+require("lazy").setup({{ import = "plugins" }})
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
