@@ -5,17 +5,13 @@ return {
 	config = function()
 		local lint = require("lint")
 		lint.linters_by_ft = {
-			markdown = { "markdownlint" },
 			dockerfile = { "hadolint" },
 			json = { "jsonlint" },
-			markdown = { "vale" },
 			rst = { "vale" },
 			--java = { "vale" },
 			javascript = { "biome" },
 			go = { "golangci-lint" },
 			python = { "pylint" },
-			c = { "cpplint" },
-			cpp = { "cpplint" },
 		}
 
 		-- Create autocommand which carries out the actual linting
@@ -27,7 +23,7 @@ return {
 				require("lint").try_lint()
 				-- You can call `try_lint` with a linter name or a list of names to always
 				-- run specific linters, independent of the `linters_by_ft` configuration
-				require("lint").try_lint("cspell")
+				-- require("lint").try_lint("cspell")
 			end,
 		})
 	end,

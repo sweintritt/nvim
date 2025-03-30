@@ -17,8 +17,8 @@ vim.keymap.set("v", "<C-v>", '<ESC>"+p', { desc = "Paste from xterm clipboard" }
 vim.keymap.set("i", "<C-v>", '<ESC>"+pa', { desc = "Pase from xterm clipboard" })
 
 vim.keymap.set("n", "<C-d>", "dd", { desc = "Delete the current line" })
-vim.keymap.set("n", "<C-S-k>", ":m .-2<CR>", { desc = "Move the current line up" })
-vim.keymap.set("n", "<C-S-j>", ":m .+1<CR>", { desc = "Move the current line down" })
+vim.keymap.set("n", "<C-s-k>", ":m .-2<CR>", { desc = "Move the current line up" })
+vim.keymap.set("n", "<C-s-j>", ":m .+1<CR>", { desc = "Move the current line down" })
 
 vim.keymap.set("n", "<C-x>", ":bn<CR>", { desc = "Switch to next buffer" })
 vim.keymap.set("n", "<C-y>", ":bp<CR>", { desc = "Switch to previous buffer" })

@@ -1,6 +1,7 @@
 ToDo
 =====
 
+* ToDos are not highlighted or listed
 * Plugins to try
   * https://github.com/EL-MASTOR/bufferlist.nvim
   * https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-completion.md
