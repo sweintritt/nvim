@@ -5,12 +5,12 @@ return {
 	config = function()
 		local lint = require("lint")
 		lint.linters_by_ft = {
-			dockerfile = { "hadolint" },
+--			dockerfile = { "hadolint" },
 			json = { "jsonlint" },
-			rst = { "vale" },
+--			rst = { "vale" },
 			--java = { "vale" },
-			javascript = { "biome" },
-			go = { "golangci-lint" },
+--			javascript = { "biome" },
+--			go = { "golangci-lint" },
 			python = { "pylint" },
 		}
 
