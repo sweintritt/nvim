@@ -226,7 +226,24 @@ return {
 			local servers = {
 				-- clangd = {},
 				-- gopls = {},
-				-- pyright = {},
+				pylsp = {
+					plugins = {
+						-- formatter options
+						black = { enabled = true },
+						autopep8 = { enabled = false },
+						yapf = { enabled = false },
+						-- linter options
+						pylint = { enabled = true, executable = "pylint" },
+						pyflakes = { enabled = false },
+						pycodestyle = { enabled = false },
+						-- type checker
+						pylsp_mypy = { enabled = true },
+						-- auto-completion options
+						jedi_completion = { fuzzy = true },
+						-- import sorting
+						pyls_isort = { enabled = true },
+					},
+				},
 				-- rust_analyzer = {},
 				-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
 				--
@@ -269,6 +286,7 @@ return {
 			local ensure_installed = vim.tbl_keys(servers or {})
 			vim.list_extend(ensure_installed, {
 				"stylua", -- Used to format Lua code
+				"pylsp",
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
