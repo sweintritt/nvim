@@ -54,3 +54,4 @@ vim.keymap.set("n", "k", "gk")
 vim.api.nvim_set_keymap("n", "<leader>l", ":lua AddLogEntry()<CR>", { noremap = true, silent = true })
 
 vim.keymap.set("n", "<leader>st", ":TodoTelescope<CR>", { desc = "[S]earch [T]odos" })
+--vim.keymap.set("n", "<C-w> :bp <BAR> bd #<CR>", { desc = "Close the current buffer tab" })
