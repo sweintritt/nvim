@@ -1,6 +1,5 @@
--- Dark and Light Themes for neovim on Atom One Dark & Atom One Light theme
--- https://github.com/navarasu/onedark.nvim
 return {
+	-- https://github.com/navarasu/onedark.nvim
 	"navarasu/onedark.nvim",
 	name = "onedark",
 	priority = 1000,
