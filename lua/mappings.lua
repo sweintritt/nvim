@@ -1,5 +1,3 @@
--- My custom NeoVim mappings additional to kickstart
-
 -- Clear highlights on search when pressing <Esc> in normal mode
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 -- Diagnostic keymaps
@@ -17,8 +15,6 @@ vim.keymap.set("v", "<C-v>", '<ESC>"+p', { desc = "Paste from xterm clipboard" }
 vim.keymap.set("i", "<C-v>", '<ESC>"+pa', { desc = "Pase from xterm clipboard" })
 
 vim.keymap.set("n", "<C-d>", "dd", { desc = "Delete the current line" })
-vim.keymap.set("n", "<C-s-k>", ":m .-2<CR>", { desc = "Move the current line up" })
-vim.keymap.set("n", "<C-s-j>", ":m .+1<CR>", { desc = "Move the current line down" })
 
 vim.keymap.set("n", "<C-x>", ":bn<CR>", { desc = "Switch to next buffer" })
 vim.keymap.set("n", "<C-y>", ":bp<CR>", { desc = "Switch to previous buffer" })
@@ -44,9 +40,6 @@ vim.keymap.set("i", "<Right>", "<Nop>")
 vim.keymap.set("n", "<CR>", "<C-]>") -- Follow links
 vim.keymap.set("n", "<BS>", "<C-T>") -- Go back
 
--- delete current line
-vim.keymap.set("n", "<C-d>", "dd")
-
 -- don't jump over split lines
 vim.keymap.set("n", "j", "gj")
 vim.keymap.set("n", "k", "gk")
@@ -54,4 +47,3 @@ vim.keymap.set("n", "k", "gk")
 vim.api.nvim_set_keymap("n", "<leader>l", ":lua AddLogEntry()<CR>", { noremap = true, silent = true })
 
 vim.keymap.set("n", "<leader>st", ":TodoTelescope<CR>", { desc = "[S]earch [T]odos" })
---vim.keymap.set("n", "<C-w> :bp <BAR> bd #<CR>", { desc = "Close the current buffer tab" })
