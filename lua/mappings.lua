@@ -49,3 +49,5 @@ vim.api.nvim_set_keymap("n", "<leader>l", ":lua AddLogEntry()<CR>", { noremap = 
 vim.keymap.set("n", "<leader>st", ":TodoTelescope<CR>", { desc = "[S]earch [T]odos" })
 
 vim.keymap.set("n", "<leader>sb", ":Telescope buffers<CR>", { desc = "[S]earch [B]uffers" })
+
+vim.keymap.set("n", "<leader>cb", ":bp | sp | bn | bd<CR>", { desc = "[C]lose [B]uffer" })
