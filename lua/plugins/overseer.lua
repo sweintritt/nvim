@@ -2,6 +2,6 @@
 return {
 	"stevearc/overseer.nvim",
 	config = function()
-		require("dashboard").setup({})
+		require("overseer").setup({})
 	end,
 }
