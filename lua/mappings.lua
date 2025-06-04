@@ -1,7 +1,5 @@
 -- Clear highlights on search when pressing <Esc> in normal mode
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
--- Diagnostic keymaps
-vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
 
 -- Keybinds to make split navigation easier.
 vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
@@ -19,7 +17,7 @@ vim.keymap.set("n", "<C-d>", "dd", { desc = "Delete the current line" })
 vim.keymap.set("n", "<C-x>", ":bn<CR>", { desc = "Switch to next buffer" })
 vim.keymap.set("n", "<C-y>", ":bp<CR>", { desc = "Switch to previous buffer" })
 
-vim.keymap.set("n", "<C-r>", "<ESC>:nohlsearch<CR>", { desc = "reset search highlighting" })
+vim.keymap.set("n", "<C-r>", ":nohlsearch<CR>", { desc = "reset search highlighting" })
 
 -- Easy movement in insert mode
 vim.keymap.set("i", "<C-k>", "<C-o>k")
@@ -44,10 +42,9 @@ vim.keymap.set("n", "<BS>", "<C-T>") -- Go back
 vim.keymap.set("n", "j", "gj")
 vim.keymap.set("n", "k", "gk")
 
-vim.api.nvim_set_keymap("n", "<leader>l", ":lua AddLogEntry()<CR>", { noremap = true, silent = true })
-
+vim.keymap.set("n", "<leader>ol", ":e ~/Dokumente/notes/log/log.md<CR>", { desc = "[O]pen [L]og" })
+vim.keymap.set("n", "<leader>om", ":e ~/Dokumente/notes/morning_tasks.md<CR>", { desc = "[O]pen [M]orning [T]asks" })
+vim.keymap.set("n", "<leader>ale", ":lua AddLogEntry()<CR>", { desc = "[A]dd [L]og [E]ntry" })
 vim.keymap.set("n", "<leader>st", ":TodoTelescope<CR>", { desc = "[S]earch [T]odos" })
-
 vim.keymap.set("n", "<leader>sb", ":Telescope buffers<CR>", { desc = "[S]earch [B]uffers" })
-
 vim.keymap.set("n", "<leader>cb", ":bp | sp | bn | bd<CR>", { desc = "[C]lose [B]uffer" })
