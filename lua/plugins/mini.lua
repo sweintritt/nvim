@@ -22,7 +22,7 @@ return { -- Collection of various small independent plugins/modules
 		-- Move visual selection in Visual mode or the current line in normal mode
 		-- with Alt + hjkl.
 		require("mini.move").setup()
-		require("mini.git").setup()
+		-- require("mini.git").setup()
 		require("mini.tabline").setup()
 
 		-- ... and there is more!
