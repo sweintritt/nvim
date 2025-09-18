@@ -1,7 +1,7 @@
 return {
 	"nvim-lualine/lualine.nvim",
 	name = "lualine",
-	priority = 1000,
+	event = "VeryLazy",
 	init = function()
 		require("lualine").setup({
 			options = { theme = "onedark" },
