@@ -17,6 +17,7 @@ vim.keymap.set("n", "<C-d>", "dd", { desc = "Delete the current line" })
 vim.keymap.set("n", "<C-x>", ":bn<CR>", { desc = "Switch to next buffer" })
 vim.keymap.set("n", "<C-y>", ":bp<CR>", { desc = "Switch to previous buffer" })
 
+vim.keymap.set("n", "<leader>ts", ":setlocal spell spelllang=de<CR>", { desc = "[T]oogle [S]pell checking" })
 vim.keymap.set("n", "<C-r>", ":nohlsearch<CR>", { desc = "reset search highlighting" })
 
 -- Easy movement in insert mode
