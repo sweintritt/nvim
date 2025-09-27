@@ -12,13 +12,14 @@ vim.keymap.set("v", "<C-c>", '"+yi', { desc = "copy line to xterm clipboard" })
 vim.keymap.set("v", "<C-v>", '<ESC>"+p', { desc = "Paste from xterm clipboard" })
 vim.keymap.set("i", "<C-v>", '<ESC>"+pa', { desc = "Pase from xterm clipboard" })
 
-vim.keymap.set("n", "<C-d>", "dd", { desc = "Delete the current line" })
+vim.keymap.set("n", "<C-d>", "_dd", { desc = "Delete the current line. Without copying." })
 
 vim.keymap.set("n", "<C-x>", ":bn<CR>", { desc = "Switch to next buffer" })
 vim.keymap.set("n", "<C-y>", ":bp<CR>", { desc = "Switch to previous buffer" })
 
 vim.keymap.set("n", "<leader>ts", ":setlocal spell spelllang=de<CR>", { desc = "[T]oogle [S]pell checking" })
 vim.keymap.set("n", "<C-r>", ":nohlsearch<CR>", { desc = "reset search highlighting" })
+vim.keymap.set("c", "<C-r>", "<C-r>+", { desc = "Paste into commandline" })
 
 -- Easy movement in insert mode
 vim.keymap.set("i", "<C-k>", "<C-o>k")
