@@ -37,8 +37,8 @@ vim.keymap.set("i", "<Down>", "<Nop>")
 vim.keymap.set("i", "<Left>", "<Nop>")
 vim.keymap.set("i", "<Right>", "<Nop>")
 
-vim.keymap.set("n", "<CR>", "<C-]>") -- Follow links
-vim.keymap.set("n", "<BS>", "<C-T>") -- Go back
+vim.keymap.set("n", "<leader><CR>", "<C-]>", { desc = "Follow links in help" })
+vim.keymap.set("n", "<BS>", "<C-T>", { desc = "Jump back in help" })
 
 -- don't jump over split lines
 vim.keymap.set("n", "j", "gj")
@@ -48,5 +48,14 @@ vim.keymap.set("n", "<leader>ol", ":e ~/Dokumente/notes/log/log.md<CR>", { desc 
 vim.keymap.set("n", "<leader>om", ":e ~/Dokumente/notes/morning_tasks.md<CR>", { desc = "[O]pen [M]orning [T]asks" })
 vim.keymap.set("n", "<leader>ale", ":lua AddLogEntry()<CR>", { desc = "[A]dd [L]og [E]ntry" })
 vim.keymap.set("n", "<leader>st", ":TodoTelescope<CR>", { desc = "[S]earch [T]odos" })
-vim.keymap.set("n", "<leader>sb", ":Telescope buffers<CR>", { desc = "[S]earch [B]uffers" })
 vim.keymap.set("n", "<leader>cb", ":bp | sp | bn | bd<CR>", { desc = "[C]lose [B]uffer" })
+-- Save and quit shortcuts
+vim.keymap.set("n", "<Leader>w", ":w<CR>", { desc = "[W]rite file" })
+vim.keymap.set("n", "<Leader>q", ":q<CR>", { desc = "[Q]uit" })
+
+-- Toggle file tree
+-- TODO: NeoTree has no toggle
+-- vim.keymap.set("n", "<C-a>", ":NeoTreeToggle<CR>", { desc = "Toggle file tree" })
+
+-- TODO: Change comment config to toggle with this mappind
+-- vim.keymap.set("n", "<Leader>cc", "gcc", { desc = "Toggle [L]line [C]omment" })

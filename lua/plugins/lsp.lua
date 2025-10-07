@@ -219,6 +219,8 @@ return {
 			--  - settings (table): Override the default settings passed when initializing the server.
 			--        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
 			local servers = {
+				java_language_server = {},
+
 				-- clangd = {},
 				-- gopls = {},
 				-- pyright = {},
@@ -263,7 +265,21 @@ return {
 			-- for you, so that they are available from within Neovim.
 			local ensure_installed = vim.tbl_keys(servers or {})
 			vim.list_extend(ensure_installed, {
+				"cspell",
+				"debugpy",
+				"isort",
+				"lua_ls",
+				"marksman",
+				"prettier",
+				"pylint",
+				"pyink",
+				"pylsp",
 				"stylua", -- Used to format Lua code
+				"checkstyle",
+				"clang-format",
+				"java-debug-adapter",
+				"jdtls",
+				"sonarlint-language-server",
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
@@ -316,6 +332,8 @@ return {
 			end,
 			formatters_by_ft = {
 				lua = { "stylua" },
+				java = { "clang-format" },
+				python = { "pyink" },
 				-- Conform can also run multiple formatters sequentially
 				-- python = { "isort", "black" },
 				--

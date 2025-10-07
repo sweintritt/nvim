@@ -43,24 +43,19 @@ vim.opt.inccommand = "split"
 vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
-
+-- Relative line numbers
 vim.opt.relativenumber = true
-vim.opt.cursorline = true
-
 -- Show ruler on the right side
 vim.opt.colorcolumn = "85"
 -- Make Vim to handle long lines nicely.
 vim.opt.textwidth = 85
 vim.opt.wrap = true
 vim.opt.formatoptions = "qrn1"
-
 -- disable folding
 vim.opt.foldenable = false
-
 -- no bells
 vim.opt.errorbells = false
 vim.opt.visualbell = false
-
 -- encoding
 vim.opt.encoding = "utf-8"
 -- activate lazy redraw
@@ -103,8 +98,6 @@ vim.opt.showcmd = true
 vim.opt.splitright = true
 -- Show the cursor position all the time
 vim.opt.ruler = true
--- highlight the current line
-vim.opt.cursorline = true
 -- Prefer Unix over Windows over OS 9 formats
 vim.opt.fileformats = "unix,dos,mac"
 -- jump to search results on search
