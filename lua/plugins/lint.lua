@@ -5,13 +5,9 @@ return {
 	config = function()
 		local lint = require("lint")
 		lint.linters_by_ft = {
---			dockerfile = { "hadolint" },
-			json = { "jsonlint" },
---			rst = { "vale" },
-			--java = { "vale" },
---			javascript = { "biome" },
---			go = { "golangci-lint" },
-			python = { "pylint" },
+			java = { "checkstyle", "cspell", "sonarlint-language-server" },
+			json = { "jsonlint", "sonarlint-language-server" },
+			python = { "pylint", "sonarlint-language-server" },
 		}
 
 		-- Create autocommand which carries out the actual linting
