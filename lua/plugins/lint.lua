@@ -5,9 +5,9 @@ return {
 	config = function()
 		local lint = require("lint")
 		lint.linters_by_ft = {
-			java = { "checkstyle", "cspell", "sonarlint-language-server" },
-			json = { "jsonlint", "sonarlint-language-server" },
-			python = { "pylint", "sonarlint-language-server" },
+			java = { "checkstyle", "cspell" },
+			json = { "jsonlint" },
+			python = { "pylint" },
 		}
 
 		-- Create autocommand which carries out the actual linting
