@@ -54,8 +54,4 @@ vim.keymap.set("n", "<Leader>w", ":w<CR>", { desc = "[W]rite file" })
 vim.keymap.set("n", "<Leader>q", ":q<CR>", { desc = "[Q]uit" })
 
 -- Toggle file tree
--- TODO: NeoTree has no toggle
--- vim.keymap.set("n", "<C-a>", ":NeoTreeToggle<CR>", { desc = "Toggle file tree" })
-
--- TODO: Change comment config to toggle with this mappind
--- vim.keymap.set("n", "<Leader>cc", "gcc", { desc = "Toggle [L]line [C]omment" })
+vim.keymap.set("n", "<leader>n", ":Neotree toggle<CR>", { desc = "Toggle [N]eotree" })
