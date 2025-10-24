@@ -22,20 +22,16 @@ vim.keymap.set("n", "<C-r>", ":nohlsearch<CR>", { desc = "reset search highlight
 vim.keymap.set("c", "<C-r>", "<C-r>+", { desc = "Paste into commandline" })
 
 -- Easy movement in insert mode
-vim.keymap.set("i", "<C-k>", "<C-o>k")
-vim.keymap.set("i", "<C-j>", "<C-o>j")
-vim.keymap.set("i", "<C-h>", "<C-o>h")
-vim.keymap.set("i", "<C-l>", "<C-o>l")
+vim.keymap.set("i", "<C-k>", "<Up>")
+vim.keymap.set("i", "<C-j>", "<Down>")
+vim.keymap.set("i", "<C-h>", "<Left>")
+vim.keymap.set("i", "<C-l>", "<Right>")
 
--- Disable arrow keys
-vim.keymap.set("n", "<Up>", "<Nop>")
-vim.keymap.set("n", "<Down>", "<Nop>")
-vim.keymap.set("n", "<Left>", "<Nop>")
-vim.keymap.set("n", "<Right>", "<Nop>")
-vim.keymap.set("i", "<Up>", "<Nop>")
-vim.keymap.set("i", "<Down>", "<Nop>")
-vim.keymap.set("i", "<Left>", "<Nop>")
-vim.keymap.set("i", "<Right>", "<Nop>")
+-- Easy movement in commane-line mode
+vim.keymap.set("c", "<C-k>", "<Up>")
+vim.keymap.set("c", "<C-j>", "<Down>")
+vim.keymap.set("c", "<C-h>", "<Left>")
+vim.keymap.set("c", "<C-l>", "<Right>")
 
 vim.keymap.set("n", "<leader><CR>", "<C-]>", { desc = "Follow links in help" })
 vim.keymap.set("n", "<BS>", "<C-T>", { desc = "Jump back in help" })
@@ -55,3 +51,6 @@ vim.keymap.set("n", "<Leader>q", ":q<CR>", { desc = "[Q]uit" })
 
 -- Toggle file tree
 vim.keymap.set("n", "<leader>n", ":Neotree toggle<CR>", { desc = "Toggle [N]eotree" })
+
+vim.keymap.set("i", "jh", "<ESC>", { desc = "Easier escape from insert mode" })
+vim.keymap.set("v", "jh", "<ESC>", { desc = "Easier escape from visual mode" })
