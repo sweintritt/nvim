@@ -36,8 +36,8 @@ vim.keymap.set("c", "<C-v>", "<C-r>+", { desc = "Paste from clipboard into comma
 vim.keymap.set("c", "<leader>p", '<C-r>"', { desc = "Paste from clipboard into commandline" })
 
 -- move line up/down
-vim.keymap.set("n", "<C-S-j>", ":m .+1<CR>", { desc = "Move current line down" })
-vim.keymap.set("n", "<C-S-k>", ":m .-2<CR>", { desc = "Move current line up" })
+vim.keymap.set("n", "J", ":m .+1<CR>", { desc = "Move current line down", noremap = true })
+vim.keymap.set("n", "K", ":m .-2<CR>", { desc = "Move current line up", noremap = true })
 
 -- don't jump over split lines
 vim.keymap.set("n", "j", "gj")
