@@ -1,8 +1,8 @@
 vim.keymap.set("n", "<leader>ts", ":setlocal spell spelllang=de<CR>", { desc = "[T]oogle [S]pell checking" })
 vim.keymap.set("n", "<leader>rs", ":nohlsearch<CR>", { desc = "[R]eset [S]earch highlighting" })
 
-vim.keymap.set("n", "<C-x>", ":bn<CR>", { desc = "Switch to next buffer" })
-vim.keymap.set("n", "<C-y>", ":bp<CR>", { desc = "Switch to previous buffer" })
+vim.keymap.set("n", "H", ":bp<CR>", { desc = "Switch to previous buffer" })
+vim.keymap.set("n", "L", ":bn<CR>", { desc = "Switch to next buffer" })
 
 -- Keybinds to make split navigation easier.
 vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
